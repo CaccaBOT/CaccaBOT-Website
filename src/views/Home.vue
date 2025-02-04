@@ -15,7 +15,7 @@ onMounted(() => {
 <template>
     <div class="home-wrapper flex justify-center items-center h-[95vh]">
         <div class="title-wrapper text-center">
-            <h1 class="title font-bold text-[5rem] lg:text-[10rem] bg-clip-text text-transparent relative">
+            <h1 class="title font-black text-[5rem] lg:text-[10rem] bg-clip-text text-transparent relative">
                 CaccaBOT
             </h1>
             <div class="flex flex-row overflow-hidden justify-center items-center text-[1.5rem] lg:text-[2.5rem]">
@@ -88,6 +88,6 @@ h1::after {
     background-image: linear-gradient(90deg, #ff007f, #ffae00, #00ffae, #007fff, #ae00ff);
     text-align: justify;
     text-justify: auto;
-    font-weight: bolder;
+    font-weight: 900;
 }
 </style>
