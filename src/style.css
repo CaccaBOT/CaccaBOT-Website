@@ -3,6 +3,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --gradient: linear-gradient(in oklch 90deg, #ff007f, #ffae00, #00ffae, #007fff, #ae00ff);
+}
+
 * {
   scrollbar-color: initial !important;
 }
@@ -21,4 +25,37 @@ body::-webkit-scrollbar-thumb {
     oklch(0.748 0.26 342.55)
   );
   border-radius: 4px;
+}
+
+@keyframes spin-colors {
+  0% {
+      background-position: 0% 50%;
+  }
+
+  50% {
+      background-position: 100% 50%;
+  }
+
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.text-gradient {
+  color: transparent;
+  background-clip: text;
+  background-image: var(--gradient);
+}
+
+@keyframes scroll {
+	0% {
+		transform: translateY(0);
+	}
+	30% {
+		transform: translateY(100px);
+	}
+}
+
+svg #wheel {
+	animation: scroll ease 1.5s infinite;
 }
