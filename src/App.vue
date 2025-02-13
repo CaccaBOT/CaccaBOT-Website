@@ -3,12 +3,10 @@ import Navbar from './components/Navbar.vue'
 </script>
 
 <template>
-  <Navbar/>
+  <Navbar />
   <router-view v-slot="{ Component, route }">
-      <component :is="Component" />
+    <component :is="Component" />
   </router-view>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

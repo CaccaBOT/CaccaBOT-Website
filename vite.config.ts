@@ -6,9 +6,9 @@ import Icons from 'unplugin-icons/vite'
 export default defineConfig({
   plugins: [
     vue(),
-        Icons({
-      compiler: "vue3",
-      autoInstall: true,
-    }),
-  ],
+    Icons({
+      compiler: 'vue3',
+      autoInstall: true
+    })
+  ]
 })

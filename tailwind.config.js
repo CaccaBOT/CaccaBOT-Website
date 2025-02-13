@@ -1,9 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["./src/**/*.{vue,js,ts}"],
+  content: ['./src/**/*.{vue,js,ts}'],
   theme: {
-    extend: {},
+    extend: {}
   },
-  plugins: [require("@tailwindcss/typography"), require("daisyui")],
+  plugins: [require('@tailwindcss/typography'), require('daisyui')]
 }
-

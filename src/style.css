@@ -1,10 +1,17 @@
-@import "https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap";
+@import 'https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --gradient: linear-gradient(in oklch 90deg, #ff007f, #ffae00, #00ffae, #007fff, #ae00ff);
+  --gradient: linear-gradient(
+    in oklch 90deg,
+    #ff007f,
+    #ffae00,
+    #00ffae,
+    #007fff,
+    #ae00ff
+  );
 }
 
 * {
@@ -16,7 +23,7 @@ html {
 }
 
 body {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   overflow-x: hidden;
 }
 
@@ -34,15 +41,15 @@ body::-webkit-scrollbar-thumb {
 
 @keyframes spin-colors {
   0% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 
   50% {
-      background-position: 100% 50%;
+    background-position: 100% 50%;
   }
 
   100% {
-      background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }
 
@@ -53,14 +60,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 @keyframes scroll {
-	0% {
-		transform: translateY(0);
-	}
-	30% {
-		transform: translateY(100px);
-	}
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(100px);
+  }
 }
 
 svg #wheel {
-	animation: scroll ease 1.5s infinite;
+  animation: scroll ease 1.5s infinite;
 }
