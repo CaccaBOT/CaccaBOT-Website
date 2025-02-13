@@ -8,14 +8,14 @@ import gsap from 'gsap'
 
 onMounted(() => {
     const items = document.querySelectorAll(".feature-image");
-    const xOffset = 150;
+    const xOffset = 100;
     const yOffset = -20;
 
     gsap.set(items, {
         x: (index) => xOffset * index,
         y: (index) => yOffset * index,
         zIndex: (index) => items.length - index,
-        scale: (index) => (index === 0 ? 1.25 : 1), // Front image scales up
+        scale: (index) => 1,
     });
 
     function horizontalLoop(items: any) {
@@ -26,7 +26,7 @@ onMounted(() => {
             for (let i = 0; i < totalItems; i++) {
                 let itemIndex = (currentItem + i) % totalItems;
                 let item = items[itemIndex];
-                let scaleValue = i === 0 ? 1.25 : 1; // Make the front image bigger
+                let scaleValue = 1;
 
                 gsap.to(item, {
                     x: xOffset * i,
@@ -82,11 +82,11 @@ const featureIndex = ref(0)
         <div class="divider divider-accent">
             <h1 class="text-6xl text-center font-bold text-accent">Features</h1>
         </div>
-        <div class="features-image-wrapper w-full flex justify-center items-center flex-wrap mt-20">
-            <img :src="rankings" alt="rankings" class="feature-image max-w-full w-full md:w-[40%] lg:w-[35%] rounded-xl object-cover" />
-            <img :src="profile" alt="profile" class="feature-image max-w-full w-full md:w-[40%] lg:w-[35%] rounded-xl object-cover" />
-            <img :src="stats" alt="stats" class="feature-image max-w-full w-full md:w-[40%] lg:w-[35%] rounded-xl object-cover" />
-            <img :src="cards" alt="cards" class="feature-image max-w-full w-full md:w-[40%] lg:w-[35%] rounded-xl object-cover" />
+        <div class="features-image-wrapper w-full flex justify-center items-center flex-wrap mt-[15vh]">
+            <img :src="rankings" alt="rankings" class="feature-image max-w-full w-full sm:w-[75%] md:w-[55%] lg:w-[45%] rounded-xl object-cover" />
+            <img :src="profile" alt="profile" class="feature-image max-w-full w-full sm:w-[75%] md:w-[55%] lg:w-[45%] rounded-xl object-cover" />
+            <img :src="stats" alt="stats" class="feature-image max-w-full w-full sm:w-[75%] md:w-[55%] lg:w-[45%] rounded-xl object-cover" />
+            <img :src="cards" alt="cards" class="feature-image max-w-full w-full sm:w-[75%] md:w-[55%] lg:w-[45%] rounded-xl object-cover" />
         </div>
         <div class="info-wrapper flex flex-col justify-center items-center w-10/12 mx-auto text-justify">
             <h1 class="feature-title text-gradient text-5xl font-bold mb-2">{{ features[featureIndex].title }}</h1>

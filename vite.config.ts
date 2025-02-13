@@ -6,7 +6,7 @@ import Icons from 'unplugin-icons/vite'
 export default defineConfig({
   plugins: [
     vue(),
-    Icons({
+        Icons({
       compiler: "vue3",
       autoInstall: true,
     }),

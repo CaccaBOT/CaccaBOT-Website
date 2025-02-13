@@ -11,8 +11,13 @@
   scrollbar-color: initial !important;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
