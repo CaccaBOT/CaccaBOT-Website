@@ -2,7 +2,6 @@
 import { onMounted, ref } from 'vue'
 import Features from './Features.vue'
 import Pricing from './Pricing.vue'
-import { ScrollView } from 'potiah'
 
 const words = ref([
   'stand out',
@@ -25,7 +24,6 @@ onMounted(() => {
 </script>
 
 <template>
-  <ScrollView root :duration="0.75">
     <div
       class="home-wrapper flex flex-col justify-center items-center h-[85vh]"
     >
@@ -80,7 +78,6 @@ onMounted(() => {
     </div>
     <Features />
     <Pricing />
-  </ScrollView>
 </template>
 
 <style scoped>
