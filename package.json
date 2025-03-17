@@ -13,6 +13,7 @@
     "@tailwindcss/typography": "^0.5.14",
     "autoprefixer": "^10.4.20",
     "gsap": "^3.12.7",
+    "lenis": "^1.2.3",
     "potiah": "^1.0.0-alpha.1",
     "vue": "^3.4.37",
     "vue-router": "^4.4.3"
